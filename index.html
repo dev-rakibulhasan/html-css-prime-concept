@@ -13,7 +13,9 @@
     />
     <!-- CSS linked -->
     <link rel="stylesheet" href="style.css" />
-    <title>Notes</title>
+    <!-- Favicon linked -->
+    <link rel="shortcut icon" href="img/disguise.jpg" type="image/x-icon" />
+    <title>HTML CSS prime concept</title>
   </head>
   <body>
     <!-- Navbar -->
@@ -253,21 +255,23 @@
           align-items প্রোপারটি দুটিও বিপরীমূখী আচরন করবে। আমি শুধু ফটর-ফটর করেই
           যাচ্ছি। চলেন প্রাক্টিক্যাল দুইটা উদাহরণ দেখা যাক।
         </p>
-        <div class="axis-example-parent">
-          <span class="example">Default direction এর উদাহরণ</span>
-          <span class="example">flex-direction: column; এর উদাহরণ</span>
-        </div>
-        <div class="axis-visual">
-          <div class="axis">
-            <div class="main-axis">
-              <h3 class="text-1 main-txt-color">Main axis</h3>
-              <h3 class="text-2 cross-txt-color">Cross axis</h3>
-            </div>
+        <div class="d-none d-lg-block">
+          <div class="axis-example-parent">
+            <span class="example">Default direction এর উদাহরণ</span>
+            <span class="example">flex-direction: column; এর উদাহরণ</span>
           </div>
-          <div class="axis">
-            <div class="cross-axis">
-              <h3 class="text-1 cross-txt-color">Cross axis</h3>
-              <h3 class="text-2 main-txt-color">Main axis</h3>
+          <div class="axis-visual">
+            <div class="axis">
+              <div class="main-axis">
+                <h3 class="text-1 main-txt-color">Main axis</h3>
+                <h3 class="text-2 cross-txt-color">Cross axis</h3>
+              </div>
+            </div>
+            <div class="axis">
+              <div class="cross-axis">
+                <h3 class="text-1 cross-txt-color">Cross axis</h3>
+                <h3 class="text-2 main-txt-color">Main axis</h3>
+              </div>
             </div>
           </div>
         </div>
@@ -373,21 +377,23 @@
           প্রোপারটির সাথে আমরা span (number) ভ্যালু বসিয়ে নির্দিস্ট পরিমান জায়গা
           বর্ধিত করতে পারি।
         </p>
-        <span class="example"
-          >grid-column: span আর grid-row: span এর উদাহরণ</span
-        >
-        <div class="grid-p">
-          <div class="grid grid-1">Grid-1</div>
-          <div class="grid grid-2">Grid-2</div>
-          <div class="grid grid-3">Grid-3</div>
-          <div class="grid grid-4">Grid-4</div>
-          <div class="grid grid-5">Grid-5</div>
-          <div class="grid grid-6">Grid-6</div>
-          <div class="grid grid-7">Grid-7</div>
-          <div class="grid grid-8">Grid-8</div>
-          <div class="grid grid-9">Grid-9</div>
-          <div class="grid grid-10">Grid-10</div>
-          <div class="grid grid-11">Grid-11</div>
+        <div class="d-none d-lg-block">
+          <span class="example"
+            >grid-column: span আর grid-row: span এর উদাহরণ</span
+          >
+          <div class="grid-p">
+            <div class="grid grid-1">Grid-1</div>
+            <div class="grid grid-2">Grid-2</div>
+            <div class="grid grid-3">Grid-3</div>
+            <div class="grid grid-4">Grid-4</div>
+            <div class="grid grid-5">Grid-5</div>
+            <div class="grid grid-6">Grid-6</div>
+            <div class="grid grid-7">Grid-7</div>
+            <div class="grid grid-8">Grid-8</div>
+            <div class="grid grid-9">Grid-9</div>
+            <div class="grid grid-10">Grid-10</div>
+            <div class="grid grid-11">Grid-11</div>
+          </div>
         </div>
 
         <p>
@@ -484,25 +490,27 @@
           Positioning এর ক্ষেত্রে দুই বা ততাধিক আইটেম এর কে ওপরে বা কে নিচে
           থাকবে তা নির্ধারন করা হয় z-index এর মাধ্যমে।
         </p>
-        <span class="example">z-index এর উদাহরণ</span>
-        <div class="boxes box-parent-rel">
-          <div class="child-1 box-child-1">
-            <p>Box-1</p>
+        <div class="d-none d-lg-block">
+          <span class="example">z-index এর উদাহরণ</span>
+          <div class="boxes box-parent-rel">
+            <div class="child-1 box-child-1">
+              <p>Box-1</p>
+            </div>
+            <div class="child-2 box-child-2">
+              <p>Box-2</p>
+            </div>
+            <div class="child-3 box-child-3">
+              <p>Box-3</p>
+            </div>
           </div>
-          <div class="child-2 box-child-2">
-            <p>Box-2</p>
-          </div>
-          <div class="child-3 box-child-3">
-            <p>Box-3</p>
-          </div>
+          <p>
+            যার z-index ভ্যালু যত কম হবে সে ততো নিচে থাকবে। এখানে <br />
+            box-1 এর z-index ভ্যালু 1 = সে সবার নিচে আছে। <br />
+            box-2 এর z-index ভ্যালু 2= সে box-1 এর ওপরে আছে। <br />
+            box-3 এর z-index ভ্যালু 3 = এই তিনটি বক্স এর মধ্যে সে সবার অপরে আছে।
+            বিশ্বাস না হলে ইন্সপ্যাক্ট করে দেখো এখানে ৩ টা বক্সই আছে।
+          </p>
         </div>
-        <p>
-          যার z-index ভ্যালু যত কম হবে সে ততো নিচে থাকবে। এখানে <br />
-          box-1 এর z-index ভ্যালু 1 = সে সবার নিচে আছে। <br />
-          box-2 এর z-index ভ্যালু 2= সে box-1 এর ওপরে আছে। <br />
-          box-3 এর z-index ভ্যালু 3 = এই তিনটি বক্স এর মধ্যে সে সবার অপরে আছে।
-          বিশ্বাস না হলে ইন্সপ্যাক্ট করে দেখো এখানে ৩ টা বক্সই আছে।
-        </p>
         <span class="heading-2" id="overflow">Overflow নিয়ে কিছু কথা</span
         ><br />
         <span class="heading-3"
@@ -534,43 +542,45 @@
           hidden হয়ে যেত। আবার, overflow: scroll; প্রপার্টি ব্যবহার করলে
           লেখাগুলো scroll করে পড়া যেত।
         </p>
-        <div class="overflow-parent">
-          <div>
-            <div class="example">overflow: hidden; এর উদাহরণ</div>
-            <div class="overflow-box overflow-hidden">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
-              unde facilis aliquam quae quia quisquam obcaecati ea cumque harum
-              minus similique fuga, aliquid qui beatae dolore nemo eligendi sint
-              delectus quasi ipsum exercitationem! Aperiam eius saepe harum
-              veritatis! A veritatis ipsam deserunt impedit ut vero ab molestiae
-              perspiciatis ullam animi adipisci, eligendi repellendus odit
-              facere numquam soluta illo, possimus asperiores pariatur magnam
-              quasi rem aliquam rerum error! Nemo obcaecati distinctio soluta
-              asperiores nostrum repellendus hic minus voluptates doloribus?
-              Provident nihil magni excepturi quod aut quaerat omnis autem
-              consequatur veritatis cum nesciunt velit explicabo debitis nisi
-              commodi ratione dolorem tempora, officiis enim. Illum officiis
-              maiores accusantium praesentium dolor ex voluptates quas atque aut
-              eveniet voluptate nobis totam.
+        <div class="d-none d-lg-block">
+          <div class="overflow-parent">
+            <div>
+              <div class="example">overflow: hidden; এর উদাহরণ</div>
+              <div class="overflow-box overflow-hidden">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
+                unde facilis aliquam quae quia quisquam obcaecati ea cumque
+                harum minus similique fuga, aliquid qui beatae dolore nemo
+                eligendi sint delectus quasi ipsum exercitationem! Aperiam eius
+                saepe harum veritatis! A veritatis ipsam deserunt impedit ut
+                vero ab molestiae perspiciatis ullam animi adipisci, eligendi
+                repellendus odit facere numquam soluta illo, possimus asperiores
+                pariatur magnam quasi rem aliquam rerum error! Nemo obcaecati
+                distinctio soluta asperiores nostrum repellendus hic minus
+                voluptates doloribus? Provident nihil magni excepturi quod aut
+                quaerat omnis autem consequatur veritatis cum nesciunt velit
+                explicabo debitis nisi commodi ratione dolorem tempora, officiis
+                enim. Illum officiis maiores accusantium praesentium dolor ex
+                voluptates quas atque aut eveniet voluptate nobis totam.
+              </div>
             </div>
-          </div>
-          <div>
-            <div class="example">overflow: hidden; এর উদাহরণ</div>
-            <div class="overflow-box overflow-scroll">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
-              unde facilis aliquam quae quia quisquam obcaecati ea cumque harum
-              minus similique fuga, aliquid qui beatae dolore nemo eligendi sint
-              delectus quasi ipsum exercitationem! Aperiam eius saepe harum
-              veritatis! A veritatis ipsam deserunt impedit ut vero ab molestiae
-              perspiciatis ullam animi adipisci, eligendi repellendus odit
-              facere numquam soluta illo, possimus asperiores pariatur magnam
-              quasi rem aliquam rerum error! Nemo obcaecati distinctio soluta
-              asperiores nostrum repellendus hic minus voluptates doloribus?
-              Provident nihil magni excepturi quod aut quaerat omnis autem
-              consequatur veritatis cum nesciunt velit explicabo debitis nisi
-              commodi ratione dolorem tempora, officiis enim. Illum officiis
-              maiores accusantium praesentium dolor ex voluptates quas atque aut
-              eveniet voluptate nobis totam.
+            <div>
+              <div class="example">overflow: hidden; এর উদাহরণ</div>
+              <div class="overflow-box overflow-scroll">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
+                unde facilis aliquam quae quia quisquam obcaecati ea cumque
+                harum minus similique fuga, aliquid qui beatae dolore nemo
+                eligendi sint delectus quasi ipsum exercitationem! Aperiam eius
+                saepe harum veritatis! A veritatis ipsam deserunt impedit ut
+                vero ab molestiae perspiciatis ullam animi adipisci, eligendi
+                repellendus odit facere numquam soluta illo, possimus asperiores
+                pariatur magnam quasi rem aliquam rerum error! Nemo obcaecati
+                distinctio soluta asperiores nostrum repellendus hic minus
+                voluptates doloribus? Provident nihil magni excepturi quod aut
+                quaerat omnis autem consequatur veritatis cum nesciunt velit
+                explicabo debitis nisi commodi ratione dolorem tempora, officiis
+                enim. Illum officiis maiores accusantium praesentium dolor ex
+                voluptates quas atque aut eveniet voluptate nobis totam.
+              </div>
             </div>
           </div>
         </div>
