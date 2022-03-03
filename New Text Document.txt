@@ -1,0 +1,11 @@
+Inline eliment and block eliment in HTML>>>
+Semantic tags>>>
+CSS regular properties>>>
+Flexbox Align Items VS Justify content>>>
+Use ase of flex grow>>>
+CSS Grid>>>
+Display none VS Visibility hidden and Inline block>>>
+Position Relative VS Absulote and z-index>>>
+Overflow>>>
+CSS spacificity>>>
+Pseudo Class(Space not allowed)>>>

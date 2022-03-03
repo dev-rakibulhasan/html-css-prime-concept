@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- CSS linked -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Notes</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">HTML CSS prime concept</a>
+        <div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <!-- HTML dropdown -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  HTML
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="#block-e">Block element</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#inline-e">Inline element</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#semantic">Semantic tag</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  CSS
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="#css-basic-p"
+                      >Basic CSS properties</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#flexbox">CSS flex box</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#grid">CSS Grid</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#visibility-display"
+                      >Visibility VS Display</a
+                    >
+                    <a class="dropdown-item" href="#position"
+                      >Position and Z-index</a
+                    >
+                    <a class="dropdown-item" href="#overflow">Overflow</a>
+                    <a class="dropdown-item" href="#spacificity"
+                      >CSS spacificity</a
+                    >
+                    <a class="dropdown-item" href="#pseudo"
+                      >Pseudo class concept</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#why-this"
+                  tabindex="-1"
+                  aria-disabled="true"
+                  >Why this?</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Main section -->
+    <main>
+      <!-- HTML section -->
+      <section>
+        <div class="heading-1">
+          <span class="heading-1-child">HTML এর বিভ্রান্তি</span>
+        </div>
+        <br />
+        <span class="heading-2"
+          >Block element আর Inline element এর মধ্যে পার্থক্য</span
+        ><br />
+        <span class="heading-3" id="block-e">Block element</span>
+        <p>
+          ব্লক এলিমেন্ট অনেকটা বড় খালুর মতো। যেমন বড় খালু আমাদের বাসায় আসলে
+          আমরা একটি ঘর এবং ঘাট সম্পূর্ণ ছেড়ে দেই এবং তাকে সম্মানের সাথে আরাম মত
+          একা থাকতে দেই, ব্লক এলিমেন্ট ও ঠিক তেমনি ডিক্লেয়ার করার সাথে সাথেই
+          নিজস্ব অবস্থান থেকে সম্পূর্ণ weidth নিয়ে আরাম মত বসে পড়ে। এরা বড়,
+          তাই সুবিধামতো এদের hight, Width এবং Margin, Padding দেয়া যায় ৷ যেমন
+          h1 একটি ব্লক এলিমেন্ট ৷ নিচে তাকে ডিক্লেয়ার করে তার ব্যাকগ্রাউন্ড সেট
+          করে দিলে আমরা তার attitude দেখতে পারবো।
+        </p>
+        <h1 class="block">
+          আমি h1 ট্যাগ। আমার আরেকটা পরিচয় হলো আমি ক্লক এলিমেন্ট। <br />
+          দেখো পুরো জায়গায় আমাকে ছেড়ে দেওয়া হয়েছে।>>>>>>>>
+        </h1>
+        <span class="example"
+          >এমন আরো কিছু block element এর উদাহরণ দেওয়া হলোঃ</span
+        >
+        <br />
+        <textarea disabled="true">
+  <address>,<article>,<aside>,<blockquote>,<canvas>,<dd>,<div>,<dl>,<dt>,<fieldset>,<figcaption>,<figure>,<footer>,<form>,<h1>-<h6>,<header>,<hr>,<li><main>,<nav>,<noscript>,<ol>,<p><pre>,<section>,<table>,<tfoot>,<ul>,<video>,</video></textarea
+        ><br />
+        <span class="heading-3" id="inline-e">Inline element</span>
+        <p>
+          মনে কর, তুমি নিজেই inline element। বড় খালু বাসায় আসলে তুমি রুমটা তাকে
+          ছেড়ে দিয়েছো ঠিকই। কিন্তু তোমাকেও তো কোথাও না কোথাও থাকতে হবে। ওইদিকে
+          আরো অনেক আত্মীয়-স্বজন বাকি সব রুম দখল করে নিয়েছে। তারাও সিনিয়র। তাই
+          তাদেরকেও কোথাও সড়িয়ে দেওয়ার সাহস তোমার নেই। এমন সিচুয়েশনে তুমি নিশ্চয়
+          তোমার সমবয়সী আর ছোটো ভাইদেরকে নিয়ে কোনো এক রুমের ফ্লোরে গাদাগাদি করে
+          থাকবে, ইনলাইন এলিমেন্টও ঠিক এমনি, এরা সম্পূর্ণ জায়গা দখল করে না। বরং,
+          এরা সবাই মিলে এক লাইনে গাদাগাদি করে থাকে। এদের ডানে বামে Margin, এবং
+          সব দিকে Padding দেয়া যায়, কিন্তু hight, Width দেওয়া যায়না। তবে এদের
+          css প্রোপার্টি display: block; করে দিলে এরাও ব্লক এলিমেন্ট এর মত
+          সুবিধা পায়। অনেকটা জেদ করে অধিকার আদায় করে নেওয়ার মতো বেপার। ছোটো তো,
+          তাই জেদ করলেই কাজ হয়ে যায়।
+        </p>
+        <bdo class="inline-1">আমি ইনলাইন এলিমেন্ট bdo</bdo>
+        <span class="inline-2"> আমিও ইনলাইন এলিমেন্ট span</span><br />
+        <span class="example"
+          >এমন আরো কিছু Inline element এর উদাহরণ দেওয়া হলোঃ</span
+        >
+        <br />
+        <textarea disabled="true">
+  <a>,<abbr>,<acronym>,<b>,<bdo>,<big>,<br>,<cite>,<code>,<dfn>,<em>,<i>,<img>,<input>,<kbd>,<label>,<map>,<object>,<output>,<q>,<samp>,<span>
+        </textarea
+        ><br />
+        <span class="heading-2" id="semantic">Semantic ট্যাগ</span><br />
+        <span class="heading-3">Semantic ট্যাগ কি?</span>
+        <p>
+          HTML 4 যখন ছিলো, তখন div এর সাথে ক্লাস অ্যাড করেই সব কাজ করে ফেলা হতো।
+          যেমনঃ
+          <input
+            type="text"
+            disabled="true"
+            value='<div class="navbar"></div>'
+          />
+          কিন্তু, HTML 5 কিছু নতুন অর্থবহ ট্যাগ নিয়ে এসেছে। তাদের ধর্ম div এর
+          মতই। তবে, এগুলো তোমার ওয়েব পেজের বিভিন্ন অংশকে সহজেই বুঝতে সাহায্য
+          করবে।
+        </p>
+        <span class="example">কিছু Semantic এর উদাহরণ দেওয়া হলোঃ</span><br />
+        <textarea disabled="true">
+  <article>, <aside>, <details>, <figcaption>, <figure>, <footer>, <header>, <main>, <mark>, <nav>, <section>, <summary>, <time>,
+          </textarea
+        >
+      </section>
+      <!-- CSS section -->
+      <section>
+        <div class="heading-1">
+          <span class="heading-1-child">CSS এর বিভ্রান্তি</span>
+        </div>
+        <span class="heading-2" id="css-basic-p">মৌলিক CSS properties </span>
+        <br />
+        <span class="heading-3">মৌলিক CSS properties কি এবং কেনো?</span>
+        <p>
+          margin, padding আর hight, width এই চারটাকে আমি বলি মৌলিক properties.
+          কারন এগুলো box model এর অংশ। কোনো এলিমেন্টকে সাইজ না করলে বাকি
+          জিনিসগুলা কিভাবে apply করবো ভাই? তাই যে যত কথাই বলুক, এগুলো আমার নিত্য
+          দিনের সাথি।
+        </p>
+        <span class="heading-2" id="flexbox">Flexbox সমগ্র </span><br />
+        <span class="heading-3"
+          >Flexbox মাধ্যমে আইটেমগুলকে পাশাপাশি আনার উপায়</span
+        >
+        <p>
+          Flexbox আমাদের কোনো আইটেমকে পাশাপাশি আনতে সাহায্য করে। এক্ষেত্রে একটি
+          মা এলিমেন্ট এর কোলের মধ্যে কিছু বাচ্চাকাচ্চা রাখা হয় এবং বাচ্চাগুলোকে
+          পাশাপাশি আনতে মা এর ক্লাস নেম ধরে display: flex; করে দেওয়া হয়।
+        </p>
+        <span class="example"
+          >Flexbox দিয়ে ৩ টি div কে পাশাপাশি এনে দেখানো হলো</span
+        >
+        <div class="parent">
+          <div class="child-1">
+            <h4>আমি ১ম সন্তান।</h4>
+          </div>
+          <div class="child-2">
+            <h4>আমি ২য় সন্তান।</h4>
+          </div>
+          <div class="child-3">
+            <h4>আমি ৩য় সন্তান।</h4>
+          </div>
+        </div>
+        <p>
+          এদের মা div এর ওপর display: flex; ব্যবহার করে পাশাপাশি আনা হয়েছে। এবং
+          flex box এর আর একটি প্রোপার্টি justify-content: space-evenly; ব্যবহার
+          করে তাদের সবার পাশে সমপরিমান জায়গা দেওয়া হয়েছ। এমন আরো কিছু স্পেসিং
+          ভ্যালু রয়েছে। যেমনঃ space-between, space-around, space-evenly. আকাশি
+          রং এর div টি মূলত মা div, যার কোলের মধ্যে ৩টি সন্তান রয়েছে।
+        </p>
+        <span class="heading-3"
+          >Flexbox এর মাধ্যমে কোনো আইটেমকে মাঝামাঝি আনার উপায়</span
+        >
+        <p>
+          কোনো সন্তান div (Child div) কে মা div (Mother div) এর একদম মাঝামাঝি
+          আনতে মা div এর মধ্যে দুইটি Property ব্যবহার করা হয়। একটি
+          justify-content: center; আরেকটি align-items: center; এই দুইটি Proparty
+          ব্যবহার করলে সন্তান গুলো মা এর height এবং width অনুযায়ী একদম মাঝখানে
+          চলে আসবে। এখন নিশ্চয় মনে একটা প্রশ্ন ধাক্কা মারতেছে। প্রশ্নটা হলো, কে
+          কোনদিকে কাজ করে তা তো বললেন না?! হ্যা এইটা এখনো বলিনি কারন flexbox
+          কিন্তু horizontal বা virtical হিসেবে চিন্তা করে না। flexbox দুইটা axis
+          হিসেবে চিন্তা করে। একটা Main axis অন্যটা হলো Cross axis, যদি আমরা
+          justify-content: center ব্যবহার করি তাহলে তা Main axis বরাবর মাঝখানে
+          চলে আসে। আর যদি আমরা align-items: center; ব্যবহার করি তাহলে তা Cross
+          axis বরাবর মাঝখানে চলে আসে। এইভাবে চিন্তা করার পেছনে একটা কারণ হলো,
+          যখন আমরা flex-diretion: column; ব্যবহার করব, তখন Main axis আর Cross
+          axis কলাম এর সাপেক্ষে ঘুরে যাবে। যার ফলে justify-content আর
+          align-items প্রোপারটি দুটিও বিপরীমূখী আচরন করবে। আমি শুধু ফটর-ফটর করেই
+          যাচ্ছি। চলেন প্রাক্টিক্যাল দুইটা উদাহরণ দেখা যাক।
+        </p>
+        <div class="axis-example-parent">
+          <span class="example">Default direction এর উদাহরণ</span>
+          <span class="example">flex-direction: column; এর উদাহরণ</span>
+        </div>
+        <div class="axis-visual">
+          <div class="axis">
+            <div class="main-axis">
+              <h3 class="text-1 main-txt-color">Main axis</h3>
+              <h3 class="text-2 cross-txt-color">Cross axis</h3>
+            </div>
+          </div>
+          <div class="axis">
+            <div class="cross-axis">
+              <h3 class="text-1 cross-txt-color">Cross axis</h3>
+              <h3 class="text-2 main-txt-color">Main axis</h3>
+            </div>
+          </div>
+        </div>
+        <span class="heading-3"
+          >Flexbox এর Child এর মাঝে জায়গা বন্টন করার উপায়</span
+        >
+        <p>
+          আমরা চাইলে Flexbox এর বাচ্চা আইটেমগুলোর মাঝে আনুপাতিক হারে জায়গা ভাগ
+          করে দিতে পারি। এক্ষেত্রে, Child আইটেমগুলোর প্রোপার্টি হিসেবে flex-grow
+          ব্যবহার করতে হবে। flex-grow এর ডিফল্ট ভ্যাল্যু 0 থাকে। এর ভ্যালু
+          প্রতিটি Child আইটেম এর মধ্যে 1,2,3 ইত্যাদি দেওয়া হয়। আর এই অনুপাত
+          হিসেবেই মা এর কোলে থাকা বাচ্চা গুলোকে জায়গা ভাগ করে দেওয়া হয়।
+        </p>
+        <span class="example">একটি উদাহরণ দেওয়া হলোঃ</span>
+        <div class="flex-grow">
+          <div class="flex-grow-1"><h4>flex-grow: 1;</h4></div>
+          <div class="flex-grow-2"><h4>flex-grow: 2;</h4></div>
+        </div>
+        <div class="css-grid" id="grid">
+          <span class="heading-2">CSS Grid এর সমগ্র </span><br />
+          <span class="heading-3">CSS Grid ব্যাবহারের নিয়ম</span>
+          <p>
+            CSS Grid এর ক্ষেত্রেও একটি মা এলিমেন্ট এর মধ্যে কিছু
+            বাচ্চা-কাচ্চাদের রাখতে হবে। তারপর মা এলিমেন্ট এর ওপর display:grid;
+            প্রোপার্টি ব্যাবহার করতে হবে। এখনো কোনো কিছুই হয়নি। কাজ আর অল্প একটু
+            বাকি আছে। CSS Grid হলো 2 dimensional layout তৈরি করতে পারে। তাই,
+            display:grid; ভ্যালু সেট করার পর আমরা কতোগুলো column বা row চাই, তা
+            বলে দিতে হবে। নিচে CSS grid এর একটি উদাহরণ দেওয়া দেওয়া হয়েছে।
+          </p>
+        </div>
+        <span class="example">CSS grid এর উদাহরণ</span>
+        <div class="grid-container">
+          <div class="grid-item">
+            <p>Grid item 1</p>
+          </div>
+          <div class="grid-item">
+            <p>Grid item 2</p>
+          </div>
+          <div class="grid-item">
+            <p>Grid item 3</p>
+          </div>
+          <div class="grid-item">
+            <p>Grid item 4</p>
+          </div>
+          <div class="grid-item">
+            <p>Grid item 5</p>
+          </div>
+          <div class="grid-item">
+            <p>Grid item 6</p>
+          </div>
+          <div class="grid-item">
+            <p>Grid item 7</p>
+          </div>
+          <div class="grid-item">
+            <p>Grid item 8</p>
+          </div>
+          <div class="grid-item">
+            <p>Grid item 9</p>
+          </div>
+          <div class="grid-item">
+            <p>Grid item 10</p>
+          </div>
+          <div class="grid-item">
+            <p>Grid item 11</p>
+          </div>
+          <div class="grid-item">
+            <p>Grid item 12</p>
+          </div>
+        </div>
+        <div>
+          <p>
+            ওপরে একটি মা div (class="grid-container") এর মধ্যে ১২ টি সন্তান div
+            (class="grid-item") রাখা হয়েছে। এর পর মা div এর ভেতর display:grid;
+            প্রোপার্টি বসিয়ে, আমরা কয়টা column চাই তা বলে দেওয়া হয়েছে এবং
+            বাচ্চাগুলোর প্রত্যেকের মাঝে কতটুকু Gap চাই তা বলে দেওয়া হয়েছে।
+            এখানে, মা div এর মধ্যে ব্যবহৃত CSS প্রোপার্টিগুলো নিচে দেখানো হলোঃ
+          </p>
+          <br />
+          <div class="grid-proparties">
+            <p>.grid-container {</p>
+            <p class="properties">
+              display: grid; >>> তোমার বাচ্চাগুলোকে গ্রিড হিসেবে সাজাও।<br />
+              grid-template-columns: repeat(4, 1fr); >>> তোমার বাচ্চাগুলোকে ৪
+              কলামে বিভক্ত করো এবং সবাইকে সমপরিমান জায়গা দাও।<br />
+              grid-gap: 20px; >>> প্রতিটি বাচ্চার মধ্যবর্তী দূরুত্ব ২০ পিক্সেল
+              করে দাও।<br />
+              }
+            </p>
+          </div>
+          এখানে fr অর্থ হলো fraction. এটি মা div এর অভ্যন্তরে অবস্থিত বাচ্চা div
+          গুলোকে আনুপাতিক হারে যায়গা বন্টন করে দেয়। আর একটু উদাহরণ দিয়ে একটি
+          ছোট্ট কিন্তু গুরুত্বপূর্ন বিষয় যেনে নেই। <br />
+          grid-template-columns: repeat(4, 1fr) এই প্রোপার্টিতে repeat(4, 1fr)
+          ফাংশন দ্বারা বোঝানো হয়েহে, তুমি ৪ টা কলাম বানাও এবং প্রতিটি কলামকে 1
+          fraction করে জায়গা দাও। যার ফলে আমরা সবগুলো কলামকে সমান দেখতে পাচ্ছি।
+          একই ভাল্যু আমরা অন্যভাবেও লিখতে পারি। <br />
+          grid-template-columns: 1fr 1fr 1fr 1fr;. তাহলেও একই কাজ হবে।
+        </div>
+        <span class="heading-3">grid-column আর grid-row বর্ধিত করার উপাই</span>
+        <p>
+          কোনো কোনো ক্ষেত্রে আমাদের নির্দিস্ট এক বা একাধিক grid item কে row বা
+          column বরাবর বর্ধিত করা লাগতে পারে। grid-column এবং grid-row
+          প্রোপারটির সাথে আমরা span (number) ভ্যালু বসিয়ে নির্দিস্ট পরিমান জায়গা
+          বর্ধিত করতে পারি।
+        </p>
+        <span class="example"
+          >grid-column: span আর grid-row: span এর উদাহরণ</span
+        >
+        <div class="grid-p">
+          <div class="grid grid-1">Grid-1</div>
+          <div class="grid grid-2">Grid-2</div>
+          <div class="grid grid-3">Grid-3</div>
+          <div class="grid grid-4">Grid-4</div>
+          <div class="grid grid-5">Grid-5</div>
+          <div class="grid grid-6">Grid-6</div>
+          <div class="grid grid-7">Grid-7</div>
+          <div class="grid grid-8">Grid-8</div>
+          <div class="grid grid-9">Grid-9</div>
+          <div class="grid grid-10">Grid-10</div>
+          <div class="grid grid-11">Grid-11</div>
+        </div>
+
+        <p>
+          এখানে Grid-1 কে বলা হয়েছে grid-column: span 2 অর্থাৎ, তুমি একাই ২ কলাম
+          এর সমপরিমান জায়গা নাও। একই ভাবে, Grid-11 কে বলা হয়েছে grid-column:
+          span 4 অর্থাৎ, তুমি একাই ৪ column এর সমপরিমান জায়গা নাও। আবার, Grid-4
+          কে বলা হয়েছে grid-row: span 2 অর্থাৎ, তুমি একাই ২ row এর সমপরিমান
+          জায়গা নাও। মূলত website এর layout তৈরীর ক্ষেত্রে এটি খুবই গুরুত্বপূর্ন
+          ভূমিকা পালন করে।
+        </p>
+        <span class="heading-2" id="visibility-display"
+          >visibility: hidden; আর display: none; নিয়ে যত বিভ্রান্তি</span
+        ><br />
+        <span class="heading-3">visibility: hidden;</span>
+        <p>
+          মনে করো ৩ টা div এর মধ্যে মাঝখানের div টা তোমার বাড়ি। এখন যদি তোমার
+          বাড়ীর ওপর visibility: hidden; প্রয়োগ করো তাহলে দেখতে পারবা তোমার বাড়ির
+          জায়গা আছে কিন্তু বাড়ি নাই। মানে তুমি এখানে একটা গ্রেনেট মেরে দিয়েছো।
+          <br />
+          তবে, জায়গাটা ইন্সপ্যাক্ট করে দেখতে পারবে এখানে কোনো একদিন তোমার বাড়ি,
+          জায়গা সব ছিলো। পারমানবিক বোম সব শেয করে দিয়েছে।
+        </p>
+        <br />
+        <span class="example">visibility: hidden; এর একটি উদাহরণ</span>
+        <div class="boxes">
+          <div class="child-1">
+            <p>House-1</p>
+          </div>
+          <div class="child-2 visibility-hidden">
+            <p>House-2</p>
+          </div>
+          <div class="child-3">
+            <p>House-3</p>
+          </div>
+        </div>
+        <span class="heading-3">display: none;</span>
+        <p>
+          আবার একইভাবে মনে করো ৩ টা div এর মধ্যে মাঝখানের div টা তোমার বাড়ি। এখন
+          যদি তোমার বাড়ীর ওপর visibility: hidden; প্রয়োগ করো তাহলে দেখতে পারবা
+          তোমার বাড়িও নাই জায়গাও নাই। মানে তুমি এখানে একটা পারমানবিক বোম মেরে
+          দিয়েছো। যার ফলে বাড়ি এবং জায়গা উভয়ই গায়েবুল হাওয়া হয়ে গেছে।<br />
+          তবে, জায়গাটা ইন্সপ্যাক্ট করলে CSS অংশে দেখতে পারবে, এখানে কোনো একদিন
+          তোমার বাড়ি ছিলো আর কেমনই বা ছিলো সেই বাড়ির আকার আকৃতি আর রং।
+        </p>
+        <span class="example">display: none; এর একটি উদাহরণ</span>
+        <div class="boxes">
+          <div class="child-1">
+            <p>House-1</p>
+          </div>
+          <div class="child-2 hide display-none">
+            <p>House-2</p>
+          </div>
+          <div class="child-3">
+            <p>House-3</p>
+          </div>
+        </div>
+        <span class="heading-2" id="position"
+          >Position Relative VS absolute আর z-index নিয়ে কিছু কথা</span
+        >
+        <br />
+        <span class="heading-3">position: relative;</span>
+        <p>
+          position relative এর অর্থ হলো, যে আশ্রয় দেবে। position: relative;
+          প্রয়োগ করলে কোনো একটা absolute আইটেম তাকে কেন্দ্র করে অবস্থান পরিবর্তন
+          করে।
+        </p>
+        <span class="heading-3">position: absolute;</span>
+        <p>
+          position absolute এর অর্থ হলো, যে আশ্রয় নেবে। position: absolute;
+          প্রয়োগ করলে সেই আইটেম relative আইটেমকে কেন্দ্র করে তার অবস্থান
+          পরিবর্তন করে।
+        </p>
+        <span class="example"
+          >position: relative; আর position: absolute; এর ছোট্ট উদাহরণঃ</span
+        >
+        <p>
+          position: relative; = সূর্য্য <br />
+          position: absolute; = গ্রহ
+        </p>
+        <div class="relative">
+          position: relative; (সূর্য্য)
+          <div class="absolute">position: absolute; (গ্রহ)</div>
+        </div>
+        <br />
+        <p>
+          অপরের উদাহরণে সবুজ রঙের বাক্সকে position: relative; করা হয়েছে। আর লাল
+          বাক্সকে বলা হয়েছে তোমার position: absolute;। তুমি relative সাপেক্ষে
+          ডান পাশ থেকে 40px এবং নিচ থেকে 10px জায়গা ছাড়ো। তাই, (position:
+          absolute;) গ্রহ আমাদের সুর্য্য (position: relative;) এর সাপেক্ষে ডানে
+          40px এবং নিচ থেকে 10px জায়গা ছেড়েছে।
+        </p>
+        <sapn class="heading-3">z-index জিনিসটা কি?</sapn>
+        <p>
+          Positioning এর ক্ষেত্রে দুই বা ততাধিক আইটেম এর কে ওপরে বা কে নিচে
+          থাকবে তা নির্ধারন করা হয় z-index এর মাধ্যমে।
+        </p>
+        <span class="example">z-index এর উদাহরণ</span>
+        <div class="boxes box-parent-rel">
+          <div class="child-1 box-child-1">
+            <p>Box-1</p>
+          </div>
+          <div class="child-2 box-child-2">
+            <p>Box-2</p>
+          </div>
+          <div class="child-3 box-child-3">
+            <p>Box-3</p>
+          </div>
+        </div>
+        <p>
+          যার z-index ভ্যালু যত কম হবে সে ততো নিচে থাকবে। এখানে <br />
+          box-1 এর z-index ভ্যালু 1 = সে সবার নিচে আছে। <br />
+          box-2 এর z-index ভ্যালু 2= সে box-1 এর ওপরে আছে। <br />
+          box-3 এর z-index ভ্যালু 3 = এই তিনটি বক্স এর মধ্যে সে সবার অপরে আছে।
+          বিশ্বাস না হলে ইন্সপ্যাক্ট করে দেখো এখানে ৩ টা বক্সই আছে।
+        </p>
+        <span class="heading-2" id="overflow">Overflow নিয়ে কিছু কথা</span
+        ><br />
+        <span class="heading-3"
+          >overflow: hidden; আর overflow: scroll; কি এবং কেনো?</span
+        >
+        <p>
+          বেশি রোমান্টিক mode এ গিয়ে কেউ যদি প্রিয়তমার নিকট খুব বেশি ভালোবাসার
+          বহিপ্রকাশ করে থাকে, তখন মানুষ বলে ভালোবাসা যেন উতলাইয়া পরতেছে। এই
+          উতলাইয়া পরার বিষয়টাই হলো Overflow. যদি কখনো কোনো div এর height এর
+          তুলনায় তার মধ্যের text গুলো বেশি হয়ে যায়, তখন লেখাগুলো div এর বাহিরে
+          চলে যায়। overflow প্রোপার্টি ব্যবহার করে তা নিয়ন্ত্রন করা হয়।
+        </p>
+        <span class="example">Overflow নিয়ন্ত্রন না করলে যা হয়</span>
+        <div class="overflow-parent">
+          <div class="overflow-box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil unde
+            facilis aliquam quae quia quisquam obcaecati ea cumque harum minus
+            similique fuga, aliquid qui beatae dolore nemo eligendi sint
+            delectus quasi ipsum exercitationem! Aperiam eius saepe harum
+            veritatis! A veritatis ipsam deserunt impedit ut vero ab molestiae
+            perspiciatis ullam animi adipisci, eligendi repellendus odit facere
+            numquam soluta illo, possimus asperiores pariatur magnam quasi rem
+            aliquam rerum error!
+          </div>
+        </div>
+        <p>
+          ওপরের বক্সে overflow প্রপার্টি ব্যবহার করা হয়নি। যার ফলে লেখাগুলো div
+          এর বাহিরে চলে গেছে। overflow: hidden; প্রপার্টি ব্যবহার করলে লেখাগুলো
+          hidden হয়ে যেত। আবার, overflow: scroll; প্রপার্টি ব্যবহার করলে
+          লেখাগুলো scroll করে পড়া যেত।
+        </p>
+        <div class="overflow-parent">
+          <div>
+            <div class="example">overflow: hidden; এর উদাহরণ</div>
+            <div class="overflow-box overflow-hidden">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
+              unde facilis aliquam quae quia quisquam obcaecati ea cumque harum
+              minus similique fuga, aliquid qui beatae dolore nemo eligendi sint
+              delectus quasi ipsum exercitationem! Aperiam eius saepe harum
+              veritatis! A veritatis ipsam deserunt impedit ut vero ab molestiae
+              perspiciatis ullam animi adipisci, eligendi repellendus odit
+              facere numquam soluta illo, possimus asperiores pariatur magnam
+              quasi rem aliquam rerum error! Nemo obcaecati distinctio soluta
+              asperiores nostrum repellendus hic minus voluptates doloribus?
+              Provident nihil magni excepturi quod aut quaerat omnis autem
+              consequatur veritatis cum nesciunt velit explicabo debitis nisi
+              commodi ratione dolorem tempora, officiis enim. Illum officiis
+              maiores accusantium praesentium dolor ex voluptates quas atque aut
+              eveniet voluptate nobis totam.
+            </div>
+          </div>
+          <div>
+            <div class="example">overflow: hidden; এর উদাহরণ</div>
+            <div class="overflow-box overflow-scroll">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil
+              unde facilis aliquam quae quia quisquam obcaecati ea cumque harum
+              minus similique fuga, aliquid qui beatae dolore nemo eligendi sint
+              delectus quasi ipsum exercitationem! Aperiam eius saepe harum
+              veritatis! A veritatis ipsam deserunt impedit ut vero ab molestiae
+              perspiciatis ullam animi adipisci, eligendi repellendus odit
+              facere numquam soluta illo, possimus asperiores pariatur magnam
+              quasi rem aliquam rerum error! Nemo obcaecati distinctio soluta
+              asperiores nostrum repellendus hic minus voluptates doloribus?
+              Provident nihil magni excepturi quod aut quaerat omnis autem
+              consequatur veritatis cum nesciunt velit explicabo debitis nisi
+              commodi ratione dolorem tempora, officiis enim. Illum officiis
+              maiores accusantium praesentium dolor ex voluptates quas atque aut
+              eveniet voluptate nobis totam.
+            </div>
+          </div>
+        </div>
+        <p>
+          ওপরের উদাহরণে এ প্রথম box এ overflow: hidden; ব্যবহার করে অতিরিক্ত
+          লেখাগুলোকে div এর মধ্যে hide করা হয়েছে। আবার দ্বিতীয় box এ overflow-y:
+          scroll; ব্যবহার করে y axis বরাবর লেখাগুলোকে scroll করে পড়ার উপযোগী করা
+          হয়েছে।
+        </p>
+        <span class="heading-2" id="spacificity"
+          >(CSS spacificity) selector এর শক্তি পরিক্ষা</span
+        ><br />
+        <span class="heading-3">CSS spacificity কি?</span>
+        <p>
+          CSS ব্যবহারের সময় আমরা বিভিন্ন ধরনে selector এর সাহায্য নিয়ে থাকি।
+          কখনো আমরা tag name ব্যবহার করে থাকি, কখনো class name কখনো বা id এর
+          সাহায্যে কোনো html এলিমেন্টকে select করে তার ওপরে স্টাইল দিয়ে থাকি।
+          আমাদের জানা দরকার এই seletor গুলোর মধ্যে কার আগে কাকে মূল্যয়ন করা হয়।
+          এদের গুরুত্ব বোঝানোর জন্য আমি একটা সহজ উদাহরণ তুলে ধরলাম।
+        </p>
+        <span class="example">CSS spacificity এর উদাহরণ</span> <br />
+        <p>
+          #id= মন্ত্রী <br />
+          .class= এম. পি. <br />
+          tagname= উপজেলা চেয়ারম্যান <br /><br />
+          উপরের উদাহরণ থেকে বুঝে নাও কোনো এলিমেন্ট select করার জন্য কাকে আগে
+          প্রাধান্য দেওয়া হয়। এছাড়া আরো কিছু চ্যালা-পান্ডা আছে। চাইলে গুগোল করে
+          দেখে নিতে পারো।
+        </p>
+        <span class="heading-2" id="pseudo">Pseudo Class এর ধারনা</span><br />
+        <span class="heading-3">Pseudo Class কি?</span>
+        <p>
+          অনেক সময়ে web page এর মধ্যে বিভিন্ন Event বা ঘটনা ঘটার সাথে কিছু নতুন
+          কার্য্যকলাপ ঘটাতে হয়। যেমনঃ কোনো এলিমেন্ট এর ওপর মাউস রাখলে কি করবে,
+          কোনো input field এ focus করুলে কি ঘটবে ইত্যাদি বলে দেওয়ার মাধ্যমই হলো
+          Pseudo Class (স্যুডো ক্লাস)। কিছু স্যুডো ক্লাস এর নাম দেওয়া হলো।
+        </p>
+        <span class="example">কিছু Pseudo Class এর উদাহরণ</span>
+        <button class="pseudo">.pseudo:hover</button> <br />
+        <p>
+          a:active <br />
+          input:checked <br />
+          input:disabled <br />
+          p:empty <br />
+          input:focus <br />
+          button:hover <br />
+          এমন আরো অনেক স্যুডো ক্লাস আহে চাইলে গুগল করে দেখে নিতে পারো।
+        </p>
+      </section>
+    </main>
+    <marquee direction="Left" height="100" class="d-flex align-items-center"
+      ><h3>
+        বিষয়গুলো উদাহরণ সহ ভালোমত বুঝার জন্য এই পেজটির desktop version ব্যবহার
+        করুন...
+      </h3></marquee
+    >
+    <!-- Footer section -->
+    <footer class="bg-dark" id="why-this">
+      <div class="d-flex justify-content-around p-4">
+        <div class="w-50">
+          <h3 class="footer-title">কেনো এই বই?</h3>
+          <p>
+            HTML এবং CSS শেখার সময় আমি যে সকল বিভ্রান্তির মুখমুখি হয়েছি
+            শুধুমাত্র সে সকল বিষয় সরল এবং সাবলীলভাবে নতুনদের সামনে তুলে ধরার
+            জন্যই আমার এই ক্ষুদ্র প্রচেষ্টা। আমি মনে করি আমার এই ছোট্ট বইটা কারো
+            কিছুটা হলেও উপকারে আসতে পারে।
+          </p>
+          <h4 class="footer-title">উৎসর্গ</h4>
+          <h5>এক অপরিচিতার নামে <strong>(BNR)</strong></h5>
+        </div>
+        <div>
+          <img src="img/disguise.jpg" class="w-img mb-4" alt="" />
+          <h5><b>Writer:</b> Ralibul Hasan</h5>
+          <b>Full-stack web application deeloper</b>
+        </div>
+      </div>
+      <p class="text-center pb-3">Rakibul Hasan © 2022. All rights reserved.</p>
+    </footer>
+    <!-- Bootstrap bundle JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
